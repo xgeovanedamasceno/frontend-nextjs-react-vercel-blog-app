@@ -1,4 +1,5 @@
 import getPosts from '../lib/posts';
+import ReactMarkdown from 'react-markdown';
 
 const Post = ({ title, date, markdown }) => (
   <article>
@@ -6,7 +7,9 @@ const Post = ({ title, date, markdown }) => (
     <time className='font-extralight tracking-wider text-gray-500'>
       { date }
     </time>
-    { markdown }
+    <ReactMarkdown>
+      { markdown }
+    </ReactMarkdown>
   </article>
 );
 
